@@ -2,7 +2,7 @@ const inquirer = require('inquirer');
 const cTable = require('console.table');
 const db = require('./db/connections');
 
-// Create a prompt with choices for employee tracking
+// Create prompt with choices for employee tracking
 function selectToDo () {
 
 inquirer
@@ -64,23 +64,23 @@ inquirer
 };
 
 
-// Function runs when "view all departments" is selected
+// Function runs when view all departments is selected
 const selectAllDepartments = () => {
     return db.promise().execute("SELECT * FROM Departments;");
 };
 
-// Function runs when "view all roles" is selected
+// Function runs when view all roles is selected
 const selectAllRoles = () => {
     return db.promise().execute("SELECT * FROM Roles;");
 }
 
-// Function runs when "view all employees" is selected
+// Function runs when view all employees is selected
 const selectAllEmployees = () => {
     return db.promise().execute("SELECT * FROM Employees;");
 }
 
 
-// Adding department to the database
+// Adding department to DB
 const addDepartment = () => {
     inquirer
     .prompt([
@@ -107,7 +107,7 @@ const addDepartment = () => {
         })
     };
 
-// Adding role to the database
+// Adding role to DB
 const addRole = () => {
     inquirer
     .prompt([
@@ -143,7 +143,7 @@ const addRole = () => {
     })
 }
 
-// Adding employee to the database
+// Adding employee to DB
 const addEmployee = () => {
     inquirer
     .prompt([
@@ -184,7 +184,7 @@ const addEmployee = () => {
     })
 }
 
-// Update an employee to the database
+// Update an employee to DB
 const updateEmployee = () => {
 //     console.table(db.query(
 //         `SELECT * FROM Employees`
@@ -199,7 +199,7 @@ const updateEmployee = () => {
   ])
 }
 
-// Exit out of the inquirer prompt. Every step has a want to end option depending what the user wants to do.
+// Exit out of the inquirer prompt. every step has a want to end option depending what the user wants to do.
 
 const wantEnd = () =>
 inquirer
@@ -220,5 +220,5 @@ inquirer
 );
 
 
-// run entire function 
+// Run whole function 
 selectToDo()
