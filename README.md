@@ -4,9 +4,9 @@
 ## Description
 The Employee-Tracker is a command-line-application which helps a company keep track of their new and existing employees using Node.js, Inquirer and Mysql.
 The app allows the user to: 
-    - View all employees, departments and roles.
-    - Add new employees, roles, and department.
-    - Update existing employees roles.
+- View all employees, departments and roles.
+- Add new employees, roles, and department.
+- Update existing employees roles.
 
 ## Usage/Screenshot
 
